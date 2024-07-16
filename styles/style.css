@@ -37,12 +37,34 @@ section{
 span{
     color: var(--primary-color);
 }
-
+.btn{
+    width: 170px;
+    height: 50px;
+    margin: 0 5px;
+    border: 1px solid rgb(255, 84, 0);
+    border-radius: 8px;
+    padding: 0 10px;
+    color: white;
+    background-color: rgb(255, 84, 0);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: white;
+    color: rgb(255, 84, 0);
+    transition: .3s;
+}
+.btn i{
+    padding-right: 10px;
+}
 /* Header section starts here */
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 25px;
 }
 .nav-brands{
     display: flex;
@@ -65,6 +87,72 @@ span{
 }
 /* Header section ends here */
 
+/* Banner section starts here */
+.banner{
+    background-image:linear-gradient(rgba(19, 19, 24, 0.7), rgba(19, 19, 24, 0.1)), url(../images/card-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+.banner-container{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.banner-title{
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 20px;
+}
+.banner-description{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+}
+.banner-form{
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 25px;
+}
+input[type="text"]{
+    width: 170px;
+    height: 50px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    color: rgba(19, 19, 24, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.banner-form > select{
+    width: 170px;
+    height: 50px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    color: rgba(19, 19, 24, 0.5);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.banner-form > input:focus, select:focus{
+    outline: none;
+}
+
+
+/* Banner section ends here */
+
+
 
 
 
@@ -74,13 +162,36 @@ span{
 @media screen and (max-width:576px) {
     .navbar, .nav-brands, .nav-links{
         flex-direction: column;
-        gap: 25px;
+        gap: 20px;
         width: 100%;
         text-align: center;
     }
     .nav-brands{
         gap: 0px;
     }
+    .banner-container{
+        padding: 20px;
+    }
+    .banner-title{
+        font-size: 2rem;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .banner-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type="text"]{
+        width: 224px;
+        margin-bottom: 10px;
+    }
+    .banner-form > select, .btn{
+        width: 244px;
+        margin-bottom: 15px;
+    }
+   
 }
 
 
@@ -91,5 +202,24 @@ span{
     }
     .nav-links{
         margin-right: 10px;
+    }
+    .banner-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-title{
+        font-size: 3rem;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .banner-form > select, .btn{
+        width: 501px;
+        margin-bottom: 10px;
+    }
+    input[type="text"]{
+        width: 481px;
+        margin-bottom: 15px;
     }
 }

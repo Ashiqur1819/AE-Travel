@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root{
-    --primary-color: rgb(255, 84, 0);
+    --primary-color: #ff5400;
 }
 
 /* Shared tags and classes */
@@ -198,7 +198,53 @@ input[type="text"]{
 }
 /* Destination section ends here */
 
+/* Choose section starts here */
+.choose{
+    margin: 150px 0;
+}
+.choose-row-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.choose-row-2{
+    width: calc(50% - 10px);
+    margin:  0 auto;
+    margin-top: 25px;
+}
 
+.choose-card{
+    padding: 30px;
+    border-radius: 15px;
+}
+#choose-card-1{
+    background-color: rgba(251, 181, 99, 0.05);
+    border: 1px solid rgba(251, 181, 99, 0.2);
+}
+#choose-card-2{
+    background-color: rgba(41, 206, 246, 0.05);
+    border: 1px solid rgba(41, 206, 246, 0.2);
+}
+#choose-card-3{
+    border: 1px solid rgba(233, 68, 68, 0.2);
+    background: rgba(233, 68, 68, 0.05);
+}
+.choose-card-icon{
+    font-size: 50px;
+    color: var(--primary-color);
+}
+.choose-card-title{
+    color: rgb(19, 19, 24);
+    font-size: 24px;
+    font-weight: 800;
+}
+.choose-card-description{
+    color: rgb(90, 90, 93);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 30px;
+}
+/* Choose section ends here */
 
 /*============== Responsive design starts here================== */
 
@@ -251,6 +297,12 @@ input[type="text"]{
     .row-1, .row-2, .row-3{
         grid-template-columns: 1fr;
     }
+    .choose-row-1{
+        grid-template-columns: 1fr;
+    }
+    .choose-row-2{
+        width: 100%;
+    }
    
 }
 
@@ -260,7 +312,7 @@ input[type="text"]{
     .navbar, .nav-brands, .nav-links{
         gap: 20px;
     }
-    .navbar, .banner, .popular{
+    .navbar, .banner, .popular,.destination, .choose{
         padding: 0 25px;
     }
     .nav-links{
@@ -298,5 +350,11 @@ input[type="text"]{
     }
     .row-1, .row-2, .row-3{
         grid-template-columns: 1fr;
+    }
+    .choose-row-1{
+        grid-template-columns: 1fr;
+    }
+    .choose-row-2{
+        width: 100%;
     }
 }

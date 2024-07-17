@@ -323,6 +323,30 @@ input[type="text"]{
 }
 /* Discount section ends here */
 
+/* Perfect place section starts here */
+.perfect-place{
+    display: flex;
+    gap: 50px;
+    margin-top: 150px;
+}
+.perfect-place-content{
+    width: 50%;
+}
+.perfect-place-title{
+    line-height: 50px;
+    margin-top: 0;
+}
+.Perfect-place-list{
+    color: rgb(19, 19, 24);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.perfect-place-video iframe{
+    border-radius: 15px;
+    max-width: 100%;
+}
+/* Perfect place section ends here */
+
 /*============== Responsive design starts here================== */
 
 /* For mobile */
@@ -393,6 +417,16 @@ input[type="text"]{
     flex-direction: column;
     gap: 0;
     }
+    .perfect-place{
+      flex-direction: column;
+    }
+    .perfect-place-content{
+        width: 100%;
+    }
+    .perfect-place-title, .perfect-place-description{
+        text-align: center;
+        padding: 20px;
+    }
    
 }
 
@@ -402,7 +436,7 @@ input[type="text"]{
     .navbar, .nav-brands, .nav-links{
         gap: 20px;
     }
-    .navbar, .banner, .popular,.destination, .choose, .discount{
+    .navbar, .banner, .popular,.destination, .choose, .discount, .perfect-place{
         padding: 0 25px;
     }
     .nav-links{
@@ -463,4 +497,17 @@ input[type="text"]{
     .btn{
         max-width: 100%;
     }
+    .perfect-place{
+        flex-direction: column;
+      }
+      .perfect-place-content{
+          width: 100%;
+      }
+      .perfect-place-title, .perfect-place-description{
+          text-align: center;
+          padding: 20px;
+      }
+      .perfect-place-video iframe{
+        width: 100%;
+      }
 }

@@ -124,7 +124,7 @@ span{
     padding: 25px;
     backdrop-filter: blur(5px);
 }
-input[type="text"]{
+.banner-form > input[type="text"]{
     width: 170px;
     height: 50px;
     margin-right: 10px;
@@ -347,6 +347,49 @@ input[type="text"]{
 }
 /* Perfect place section ends here */
 
+/* Newsletter section starts here */
+.newsletter{
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    margin-top: 150px;
+}
+.newsletter-forms{
+    border: 1px solid rgb(251, 115, 47);
+    padding: 50px;
+    border-radius: 15px;
+}
+.newsletter-img img{
+    width: 100%;
+}
+.newsletter-title{
+    color: rgb(19, 19, 24);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 0;
+}
+.newsletter-form > input{
+    width: 94%;
+    height: 40px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 1px rgb(225, 225, 225);
+    color: rgba(19, 19, 24, 0.7);
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 5px 15px;
+}
+.newsletter-form > input::placeholder{
+    color: rgba(19, 19, 24, 0.3);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+/* Newsletter section ends here */
+
 /*============== Responsive design starts here================== */
 
 /* For mobile */
@@ -426,6 +469,18 @@ input[type="text"]{
     .perfect-place-title, .perfect-place-description{
         text-align: center;
         padding: 20px;
+    }
+    .newsletter{
+        grid-template-columns: 1fr;
+    }
+    .newsletter-forms{
+        padding: 20px;
+    }
+    .newsletter-form > input{
+        width: 90%;
+    }
+    .btn{
+        width: 100%;
     }
    
 }
@@ -510,4 +565,10 @@ input[type="text"]{
       .perfect-place-video iframe{
         width: 100%;
       }
+      .newsletter{
+        grid-template-columns: 1fr;
+    }
+    .newsletter-form > input{
+        width: 90%;
+    }
 }
